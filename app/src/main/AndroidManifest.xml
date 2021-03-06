@@ -24,5 +24,6 @@
             android:name=".MainActivity"
             android:theme="@style/AppTheme" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

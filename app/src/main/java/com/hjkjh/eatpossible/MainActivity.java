@@ -2,8 +2,10 @@ package com.hjkjh.eatpossible;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,13 +17,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void MenuBtnClick(View view) {
-        switch (view.getId()) {
-            case R.id.pregnantBtn:
-                break;
-            case R.id.diabetesBtn:
-                break;
-            case R.id.dogBtn:
-                break;
-        }
+        Button btn = findViewById(view.getId());
+        String btnText = btn.getText().toString();
+
+        Intent intent = new Intent(this.getApplicationContext(), SearchActivity.class);
+        intent.putExtra("mode", btnText);
+
+        startActivity(intent);
     }
 }

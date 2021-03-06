@@ -16,9 +16,9 @@ public class SplashActivity extends AppCompatActivity {
         startActivity(intent);
 
         try {
-            Thread.sleep(5000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            Log.e("Splash Screen", e.toString());
         }
         finish();
     }
